@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Waseem Akram">
+    <meta name="description" content="Password Generator">
+    <meta name="keywords" content="password,generator,flask,python,html,css,bootstrap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Password Generator</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </nav>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <form method="post" action="/">
+            <label for="password_length">Password Length:</label>
+            <input type="number" name="password_length" value="14" required>
+            <br>
+            <label for="include_digits">Include Digits:</label>
+            <input type="checkbox" name="include_digits" checked>
+            <br>
+            <label for="include_special_chars">Include Special Characters:</label>
+            <input type="checkbox" name="include_special_chars" checked>
+            <br>
+            <button type="submit" onclick="checkGeneratedPasswordStrength()">Generate Password</button>
+            <button type="button" onclick="copyToClipboard()">Copy Password</button>
+            <button type="button" onclick="downloadPassword()">Download Password</button>
+        </form>
+        {% if generated_password %}
+            <h2>Generated Password:</h2>
+            <div id="generated-password" class="generated-password">
+                {{ generated_password }}
+            </div>
+            <!-- Password Strength Bar -->
+            <div id="strength-bar"></div>
+        {% endif %}
+    </div>
+    <footer>
+        &copy; 2024 Waseem Akram. All rights reserved.
+    </footer>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
