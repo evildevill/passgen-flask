@@ -37,3 +37,4 @@ curl "https://passgen-flask.vercel.app/api/generate-password?length=16&include_u
 
 #### Endpoint: `/`
 
+This is the web interface for password generation. You can visit  [https://passgen-flask.vercel.app/](https://passgen-flask.vercel.app/) and use the provided form to generate passwords with various options.
