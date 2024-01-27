@@ -38,3 +38,38 @@ curl "https://passgen-flask.vercel.app/api/generate-password?length=16&include_u
 #### Endpoint: `/`
 
 This is the web interface for password generation. You can visit  [https://passgen-flask.vercel.app/](https://passgen-flask.vercel.app/) and use the provided form to generate passwords with various options.
+
+### Local Setup (Optional)
+
+If you want to run the Flask app locally, follow these steps:
+
+0. Clone the repository:
+
+```bash
+git clone https://github.com/evildevill/passgen-flask.git
+```
+
+1. Change the directory:
+
+```bash
+cd passgen-flask
+```
+
+2. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the Flask app:
+
+```bash
+python app.py
+```
+
+4. Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to use the web interface
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
