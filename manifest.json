@@ -1,22 +1,37 @@
 {
-    "name": "SecurePassGen",
-    "short_name": "SecurePassGen",
-    "description": "Generate strong and secure passwords with Customization options.",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#3498db",
-    "icons": [
-      {
-        "src": "/static/imgs/icons8-password-cloud-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-        {
-            "src": "/static/imgs/icons8-password-cloud-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
-  }
-  
+  "name": "SecurePassGen",
+  "short_name": "SecurePassGen",
+  "description": "Generate strong and secure passwords with customization options.",
+  "start_url": "/",
+  "id": "com.securepassgen.app",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3498db",
+  "icons": [
+    {
+      "src": "/static/icons8-password-cloud-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icons8-password-cloud-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/static/SecurePassGen-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "platform": "browser",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/static/SecurePassGen-mobile.png",
+      "sizes": "750x1344",
+      "type": "image/png",
+      "platform": "browser"
+    }
+  ]
+}

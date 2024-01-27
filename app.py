@@ -1,8 +1,13 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import random
 import string
+import os
 
 app = Flask(__name__)
+
+@app.route('/manifest.json')
+def manifest():
+    return send_from_directory(os.getcwd(), 'manifest.json')
 
 def generate_password(length, include_uppercase=True, include_lowercase=True, include_digits=True, include_special_chars=True, exclude_similar_chars=False):
     characters = ''
