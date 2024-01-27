@@ -27,10 +27,46 @@ This endpoint generates a random password based on specified parameters.
 
 ```bash
 # Generate a password with default settings (length=14, include all)
-curl "https://passgen-flask.vercel.app/api/generate-password"
+curl --request GET \
+	--url https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password \
+	--header 'X-RapidAPI-Host: securepassgen-api-ultimate-online-password-generator.p.rapidapi.com' \
+	--header 'X-RapidAPI-Key: YOUR_API_KEY'
 
 # Generate a password with custom settings
-curl "https://passgen-flask.vercel.app/api/generate-password?length=16&include_uppercase=true&include_digits=true&exclude_similar_chars=true"
+curl --request GET \
+	--url https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password?length=16&include_uppercase=true&include_digits=true&exclude_similar_chars=true \
+	--header 'X-RapidAPI-Host: securepassgen-api-ultimate-online-password-generator.p.rapidapi.com' \
+	--header 'X-RapidAPI-Key: YOUR_API_KEY'
+```
+
+```python
+# Generate a password with default settings (length=14, include all)
+import requests
+
+url = "https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password"
+
+headers = {
+	"X-RapidAPI-Key": "YOUR_API_KEY",
+	"X-RapidAPI-Host": "securepassgen-api-ultimate-online-password-generator.p.rapidapi.com"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.json())
+```
+
+```javascript
+// Generate a password with default settings (length=14, include all)
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password",
+    "method": "GET",
+    "headers": {
+        "X-RapidAPI-Host": "securepassgen-api-ultimate-online-password-generator.p.rapidapi.com",
+        "X-RapidAPI-Key": "YOUR_API_KEY"
+    }
+}
 ```
 
 ### 2. Password Generation via a Web interface
